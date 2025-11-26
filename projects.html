@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Azka Khalid| Projects</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', 'Consolas', 'Menlo', monospace;
+      background: radial-gradient(circle at 70% 40%, #6420ff 0%, #2d063d 60%, #181526 100%);
+      min-height: 100vh;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    .navbar {
+      background: rgba(22, 22, 34, 0.9);
+      padding: 19px 0 3px 0;
+      border-radius: 45px;
+      margin: 24px 40px 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 18px rgba(80,30,120,0.16);
+    }
+    .nav-links {
+      display: flex;
+      width: 100%;
+      max-width: 920px;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    .nav-links a {
+      flex: 1;
+      text-align: center;
+      color: #bcbbfd;
+      text-decoration: none;
+      font-size: 1.15rem;
+      font-family: 'Consolas', 'Menlo', monospace;
+      padding: 8px 0 4px 0;
+      border-bottom: 2.5px solid transparent;
+      transition: color .16s, border-color .16s;
+      letter-spacing: 0.01em;
+    }
+    .nav-links a.active, .nav-links a:hover {
+      color: #c996fd;
+      border-bottom: 2.5px solid #6420ff;
+    }
+    .main-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      margin-top: 70px;
+      text-align: center;
+    }
+    .big-heading {
+      font-size: 3.2rem;
+      font-weight: bold;
+      color: #c996fd;
+      margin-bottom: 38px;
+      text-align: center;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 10px;
+      justify-items: center;
+    }
+    .project-box {
+      background: rgba(70,35,130, 0.4);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(121,85,180,0.10);
+      padding: 36px 22px 28px 22px;
+      color: #fff;
+      font-size: 1.13rem;
+      font-family: inherit;
+      min-height: 134px;
+      border: 2px solid #8c4efc;
+      transition: transform .18s, box-shadow .19s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width:100%;
+      max-width:370px;
+    }
+    .project-box:hover {
+      transform: translateY(-4px) scale(1.045);
+      box-shadow: 0 13px 56px rgba(110,40,200,0.20);
+      border-color: #c996fd;
+    }
+    .project-title {
+      font-weight: bold;
+      color: #d8b4fc;
+      font-size:1.25em;
+      margin-bottom: 10px;
+    }
+    .projects-grid .project-box:last-child {
+      grid-column: 2;
+    }
+    @media (max-width: 650px) {
+      .big-heading { font-size: 2rem;}
+      .projects-grid { grid-template-columns: 1fr;gap:18px;}
+      .project-box { font-size: 1rem; padding: 22px 10px;}
+      .navbar { margin:24px 2vw 0 2vw;}
+      .projects-grid .project-box:last-child { grid-column:auto;}
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="nav-links">
+      <a href="index.html">&lt;/ Home&gt;</a>
+      <a href="about.html">&lt;/ AboutMe&gt;</a>
+      <a href="skills.html">&lt;/ MySkills&gt;</a>
+      <a href="contactme.html">&lt;/ ContactMe&gt;</a>
+      <a href="projects.html" class="active">&lt;/ MyProjects&gt;</a>
+    </div>
+  </div>
+  <div class="main-content">
+    <div class="big-heading">My Projects</div>
+    <div class="projects-grid">
+      <div class="project-box">
+        <div class="project-title">AICT Presentation</div>
+        <div>A detailed and researched presentation on the Ethical Considerations in AICT – a study in AI bias.</div>
+      </div>
+      <div class="project-box">
+        <div class="project-title">English Play</div>
+        <div>An elaborate play on bridging the emotional and generational gap between parents and their children.</div>
+      </div>
+      <div class="project-box">
+        <div class="project-title">IWF Book Review</div>
+        <div>An analysis into the political history of Pakistan and the overlooked sacrifices made by it's leaders.</div>
+      </div>
+      <div class="project-box">
+        <div class="project-title">Research Internship</div>
+        <div>An overview of the programming languages in the software and tech industry, gaining experience in networking and building connections.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
