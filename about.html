@@ -3,25 +3,151 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Azka Khalid | About Me</title>
+  <title>Saurabh Patil | About Me</title>
   <style>
-     body { margin: 0; font-family: 'Segoe UI', 'Consolas', 'Menlo', monospace; background: radial-gradient(circle at 70% 40%, #6420ff 0%, #2d063d 60%, #181526 100%); min-height: 100vh; color: #fff; overflow-x: hidden;}
-    .navbar { background: rgba(22,22,34,0.9); padding:19px 0 3px 0; border-radius:45px; margin:24px 40px 0 40px; display:flex; align-items:center; justify-content:center; box-shadow:0 3px 18px rgba(80,30,120,0.16);}
-    .nav-links { display:flex; width:100%; max-width:920px; justify-content:space-evenly; align-items:center;}
-    .nav-links a { flex:1; text-align:center; color:#bcbbfd; text-decoration:none; font-size:1.15rem; font-family:'Consolas'; padding:8px 0 4px 0; border-bottom:2.5px solid transparent; transition:color .16s, border-color .16s; letter-spacing:0.01em;}
-    .nav-links a.active, .nav-links a:hover { color:#c996fd; border-bottom:2.5px solid #6420ff;}
-    .main-flex { display:flex; flex-direction:row; justify-content:space-between; align-items:center; min-height:75vh; padding:0 70px;}
-    .main-content { max-width:700px; flex:1;}
-    .intro-row { display:flex; align-items:center; gap:20px; margin-bottom:20px;}
-    .circle-mark { width:40px; height:40px; border-radius:50%; border:2px solid #b7fcff; background:rgba(45,60,100,0.18); display:inline-block; vertical-align:middle; box-shadow:0 2px 8px rgba(120,255,255,0.07);}
-    .hello { font-size:2.1rem; letter-spacing:0.04em; color:#c0c7ff; font-family:'Consolas', monospace;}
-    .big-heading { font-size:3.5rem; font-weight:bold; color:#c996fd; margin-top:24px; margin-bottom:16px;}
-    .big-heading span { color:#d8b4fc;}
-    .tagline { font-size:2.5rem; color:#fff; font-weight:800; margin-bottom:12px; margin-top:4px;}
-    .description { color:#fff; font-size:1.18rem; font-weight:400; margin:18px 0 0 0;}
-    .profile-pic { width:280px; height:280px; border-radius:50%; object-fit:cover; border:4px solid #8c4efc; box-shadow:0 4px 24px rgba(120,60,190,0.15); background:#ccc; margin-left:20px; margin-right:85px; display:block; flex-shrink:0;}
-    @media (max-width:950px) { .main-flex { flex-direction:column; align-items:center; padding:0 6vw;} .profile-pic { margin-left:0; margin-right:0; margin-top:32px;} .main-content { max-width:98vw; }}
-    @media (max-width:650px) { .intro-row, .big-heading, .tagline { font-size:1rem;} .main-content { padding:0 4px;} .profile-pic { width:110px; height:110px;} .navbar { margin:24px 2vw 0 2vw;} .nav-links { max-width:99vw;}}
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', 'Consolas', 'Menlo', monospace;
+      background: radial-gradient(circle at 70% 40%, #6420ff 0%, #2d063d 60%, #181526 100%);
+      min-height: 100vh;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    .navbar {
+      background: rgba(22, 22, 34, 0.9);
+      padding: 19px 0 3px 0;
+      border-radius: 45px;
+      margin: 24px 40px 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 18px rgba(80,30,120,0.16);
+    }
+    .nav-links {
+      display: flex;
+      width: 100%;
+      max-width: 920px;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    .nav-links a {
+      flex: 1;
+      text-align: center;
+      color: #bcbbfd;
+      text-decoration: none;
+      font-size: 1.15rem;
+      font-family: 'Consolas', 'Menlo', monospace;
+      padding: 8px 0 4px 0;
+      border-bottom: 2.5px solid transparent;
+      transition: color .16s, border-color .16s;
+      letter-spacing: 0.01em;
+    }
+    .nav-links a.active, .nav-links a:hover {
+      color: #c996fd;
+      border-bottom: 2.5px solid #6420ff;
+    }
+
+    .page-wrap {
+      max-width: 1000px;
+      margin: 80px auto 60px auto;
+      padding: 0 30px;
+      text-align: center;
+    }
+
+    .big-heading {
+      font-size: 3.0rem;
+      font-weight: bold;
+      color: #c996fd;
+      margin-bottom: 18px;
+    }
+    .about-text {
+      font-size: 1.05rem;
+      color: #f3efff;
+      line-height: 1.7;
+      margin: 0 auto 40px auto;
+      max-width: 780px;
+    }
+
+    .section-heading {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #d8b4fc;
+      margin-top: 10px;
+      margin-bottom: 8px;
+    }
+    .section-underline {
+      width: 140px;
+      height: 3px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #c996fd, #61e4ff);
+      margin: 0 auto 26px auto;
+    }
+
+    /* Experience grid: 3 columns on large screens so center column exists */
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      justify-items: center;
+      margin-top: 6px;
+    }
+    .exp-card {
+      background: rgba(35, 20, 80, 0.85);
+      border-radius: 18px;
+      padding: 20px 18px 18px 18px;
+      border: 2px solid #8c4efc;
+      box-shadow: 0 8px 32px rgba(121,85,180,0.12);
+      transition: transform .18s, box-shadow .18s, border-color .18s;
+      max-width: 260px;
+      text-align: left;
+    }
+    .exp-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 13px 44px rgba(110,40,200,0.20);
+      border-color: #c996fd;
+    }
+    .exp-role {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+    .exp-meta {
+      font-size: 0.9rem;
+      color: #c0baf5;
+      margin-bottom: 10px;
+    }
+    .exp-desc {
+      font-size: 0.95rem;
+      color: #ece7ff;
+      line-height: 1.6;
+    }
+
+    /* Place cards in specific columns/rows for a nice centered layout */
+    .exp-java       { grid-column: 1; grid-row: 1; }
+    .exp-salesforce { grid-column: 2; grid-row: 1; }
+    .exp-ai         { grid-column: 3; grid-row: 1; }
+    .exp-frontend   { grid-column: 2; grid-row: 2; } /* centered under Salesforce */
+
+    @media (max-width: 800px) {
+      .experience-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+      .exp-java,
+      .exp-salesforce,
+      .exp-ai,
+      .exp-frontend {
+        grid-column: auto;
+        grid-row: auto;
+      }
+      .exp-card { max-width: 100%; }
+    }
+
+    @media (max-width: 650px) {
+      .page-wrap { padding: 0 14px; }
+      .big-heading { font-size: 2.3rem; }
+      .section-heading { font-size: 1.8rem; }
+    }
   </style>
 </head>
 <body>
@@ -29,20 +155,58 @@
     <div class="nav-links">
       <a href="index.html">&lt;/ Home&gt;</a>
       <a href="about.html" class="active">&lt;/ AboutMe&gt;</a>
-      <a href="skills.html">&lt;/ MySkills&gt;</a>
-      <a href="contactme.html">&lt;/ ContactMe&gt;</a>
-      <a href="projects.html">&lt;/ MyProjects&gt;</a>
+      <a href="skills.html">&lt;/ Skills&gt;</a>
+      <a href="contact.html">&lt;/ ContactMe&gt;</a>
+      <a href="projects.html">&lt;/ Projects&gt;</a>
     </div>
   </div>
-  <div class="main-flex">
-    <div class="main-content">
-      <div class="big-heading">About Me</div>
-      <div class="description">
-        Hi! I am a Bachelor's Student currently studying Computer Science at Kinnaird College For Women, with a passion for learning and specialising in game development and C#.<br><br>
-        My strengths include team collaboration, solving tough web problems, and working with new technologies to deliver seamless digital experiences.
+
+  <div class="page-wrap">
+    <!-- About Me -->
+    <div class="big-heading">About Me</div>
+    <div class="about-text">
+      I am a Java full stack developer and Salesforce engineer focused on building reliable, scalable web applications.
+      I enjoy turning complex business requirements into clean, performant solutions and exploring how AI can improve user experience and automation.
+    </div>
+
+    <!-- My Experience -->
+    <div class="section-heading">My Experience</div>
+    <div class="section-underline"></div>
+
+    <div class="experience-grid">
+      <div class="exp-card exp-java">
+        <div class="exp-role">Java Full Stack Developer</div>
+        <div class="exp-meta">Spring &amp; Hibernate • REST APIs</div>
+        <div class="exp-desc">
+          Designed and implemented backend services, RESTful APIs, and data access layers, ensuring performance and scalability for web applications.
+        </div>
+      </div>
+
+      <div class="exp-card exp-salesforce">
+        <div class="exp-role">Salesforce Developer</div>
+        <div class="exp-meta">Apex • Lightning • Automation</div>
+        <div class="exp-desc">
+          Built custom Salesforce solutions that automate workflows and improve data visibility for business stakeholders.
+        </div>
+      </div>
+
+      <div class="exp-card exp-ai">
+        <div class="exp-role">AI‑Driven Solutions</div>
+        <div class="exp-meta">GPT • Einstein AI</div>
+        <div class="exp-desc">
+          Integrated AI into applications to power smarter features, from content generation to workflow automation and recommendations.
+        </div>
+      </div>
+
+      <!-- Centered under Salesforce -->
+      <div class="exp-card exp-frontend">
+        <div class="exp-role">Frontend Developer</div>
+        <div class="exp-meta">HTML • CSS • JavaScript</div>
+        <div class="exp-desc">
+          Crafted responsive interfaces with a focus on accessibility, clean layouts, and smooth user journeys across devices.
+        </div>
       </div>
     </div>
-    <img src="myprofilepic.png" alt="" class="profile-pic">
   </div>
 </body>
 </html>
